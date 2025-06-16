@@ -1,0 +1,224 @@
+{
+  "id": "4498f063-801c-4dde-97aa-80aaad2f0601",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.admin_users": {
+      "name": "admin_users",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "username": {
+          "name": "username",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "password": {
+          "name": "password",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "admin_users_username_unique": {
+          "name": "admin_users_username_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "username"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.assessment_responses": {
+      "name": "assessment_responses",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "role": {
+          "name": "role",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "user_name": {
+          "name": "user_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "q1_score": {
+          "name": "q1_score",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "q2_score": {
+          "name": "q2_score",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "q3_score": {
+          "name": "q3_score",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "q4_score": {
+          "name": "q4_score",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "q5_score": {
+          "name": "q5_score",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "q6_score": {
+          "name": "q6_score",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "q7_score": {
+          "name": "q7_score",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "q8_score": {
+          "name": "q8_score",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "q9_score": {
+          "name": "q9_score",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "q10_score": {
+          "name": "q10_score",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "q11_score": {
+          "name": "q11_score",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "q12_score": {
+          "name": "q12_score",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "governance_score": {
+          "name": "governance_score",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "legacy_score": {
+          "name": "legacy_score",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "relationships_score": {
+          "name": "relationships_score",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "strategy_score": {
+          "name": "strategy_score",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "overall_score": {
+          "name": "overall_score",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "ip_address": {
+          "name": "ip_address",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "user_agent": {
+          "name": "user_agent",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
